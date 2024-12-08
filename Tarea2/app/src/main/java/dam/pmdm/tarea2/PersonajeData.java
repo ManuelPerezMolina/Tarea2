@@ -2,18 +2,20 @@ package dam.pmdm.tarea2;
 
 public class PersonajeData {
 
-    private final String number;
+    private final String numero;
     private final int imagen;
     private final String personaje;
     private final String descripcion;
 
 
-    public PersonajeData(String number, int imagen,String personaje,String descripcion) {
-        this.number = number;
+    public PersonajeData(String numero, int imagen, String personaje, String descripcion) {
+        this.numero = numero;
         this.imagen = imagen;
+        this.personaje = personaje;
+        this.descripcion = descripcion;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
 

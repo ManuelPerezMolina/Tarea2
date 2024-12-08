@@ -13,9 +13,8 @@ public class PersonajeViewHolder extends RecyclerView.ViewHolder {
         this.binding = binding;
     }
 
-    public void bind(@NonNull PersonajeItem personaje) {
-        binding.pcimagenview.getDrawable(personaje.getName());
-        binding.pctextview.setText(personaje.getPersonaje());
+    public void bind (@NonNull PersonajeViewHolder personaje) {
+        binding.pctextview.setText(personaje.toString());
         binding.executePendingBindings();
     }
 
