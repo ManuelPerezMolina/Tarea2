@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tarea 2</string>
+    <string name="titulo">ELIGE UN PERSONAJE</string>
+    <string name="nombre_personaje">TextView</string>
+</resources>
