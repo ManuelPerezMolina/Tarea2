@@ -3,6 +3,7 @@ package dam.pmdm.tarea2;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 import dam.pmdm.tarea2.databinding.ActivityMainBinding;
 import dam.pmdm.tarea2.databinding.PersonajeCardviewBinding;
