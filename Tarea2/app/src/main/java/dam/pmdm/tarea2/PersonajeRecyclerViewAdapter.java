@@ -13,12 +13,12 @@ import dam.pmdm.tarea2.databinding.PersonajeCardviewBinding;
 
 public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <PersonajeViewHolder> {
 
-    private final ArrayList<PersonajeViewHolder> personajes;
-    private final Context context;
+    private final ArrayList<PersonajeData> personajes;
+    private Context context;
 
-    public PersonajeRecyclerViewAdapter (ArrayList<PersonajeViewHolder> personajes, Context context){
-        this.personajes = personajes;
-        this.context = context;
+    public PersonajeRecyclerViewAdapter (ArrayList<PersonajeData> personaje) {
+        this.personajes = personaje;
+
     }
 
     @NonNull
@@ -30,7 +30,7 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
 
     @Override
     public void onBindViewHolder(@NonNull PersonajeViewHolder holder, int position){
-        PersonajeViewHolder currentPersonaje = this.personajes.get(position);
+        PersonajeData currentPersonaje = this.personajes.get(position);
         holder.bind(currentPersonaje);
         holder.itemView.setOnClickListener(view -> itemClicked(currentPersonaje));
     }
@@ -40,7 +40,7 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
         return personajes.size();
     }
 
-    private void itemClicked(PersonajeViewHolder currentPersonaje) {
+    private void itemClicked(PersonajeData currentPersonaje) {
         ((MainActivity)context).personajeClicked(currentPersonaje);
     }
 
