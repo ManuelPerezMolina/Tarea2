@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Raze Galactic</string>
-    <string name="raze_galactic">Raze Galactic</string>
-    <string name="boton1">Google Sign-in</string>
-    <string name="boton2">SIGN-UP</string>
-    <string name="boton3">LOGIN</string>
-    <string name="tv1">Show More</string>
-    <string name="tv2">textview 2</string>
-</resources>
