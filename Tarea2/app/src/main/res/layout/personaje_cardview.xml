@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="personaje"
-            type="dam.pmdm.tarea2.PersonajeViewHolder" />
+            name="datapersonaje"
+            type="dam.pmdm.tarea2.DataPersonajeItem" />
     </data>
 
 <androidx.cardview.widget.CardView

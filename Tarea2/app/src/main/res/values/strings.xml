@@ -3,4 +3,6 @@
     <string name="titulo">ELIGE UN PERSONAJE</string>
     <string name="nombre_personaje">TextView</string>
     <string name="Titulo_Aplicacion"><u>PERSONAJES DE MARIO BROS</u></string>
+    <string name="descripcion">DESCRIPCION</string>
+    <string name="habilidades">HABILIDADES</string>
 </resources>
