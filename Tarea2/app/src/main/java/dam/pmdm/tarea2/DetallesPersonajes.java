@@ -2,6 +2,7 @@ package dam.pmdm.tarea2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,11 +22,6 @@ public class DetallesPersonajes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detalles_personajes);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
         binding = ActivityDetallesPersonajesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         init();
@@ -33,10 +29,12 @@ public class DetallesPersonajes extends AppCompatActivity {
 
     public void init(){
        Bundle extras = getIntent().getExtras();
-       binding.adpnombrepersonaje.setText(extras.getString("nombre"));
-       binding.adpdescripcion.setText(extras.getString("descripcion"));
-       binding.adphabilidades.setText(extras.getString("habilidades"));
-       binding.adpimageView.set("imagen");
-
+        if (extras != null) {
+            binding.adpnombrepersonaje.setText(extras.getString("nombre"));
+            binding.adpdescripcion.setText(extras.getString("descripcion"));
+            binding.adphabilidades.setText(extras.getString("habilidades"));
+            Intent intent = getIntent();
+            int imagen = intent.getIntExtra("imagen", 0);
+        }
     }
 }
