@@ -43,6 +43,7 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
     }
 
     private void itemClicked(PersonajeData currentPersonaje, View view) {
+        context = view.getContext();
         ((MainActivity) view.getContext()).personajeClicked(currentPersonaje,view);
     }
 

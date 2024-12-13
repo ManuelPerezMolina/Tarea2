@@ -23,7 +23,7 @@
             android:id="@+id/adpimageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/mario" />
+            app:srcCompat="@drawable/mario"/>
 
         <TextView
             android:id="@+id/adpnombrepersonaje"

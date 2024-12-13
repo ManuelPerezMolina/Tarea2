@@ -79,7 +79,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void personajeClicked(PersonajeData personaje,View view){
        System.out.println("Has pulsado el botón"+personaje);
-       Intent intent = new Intent(this,DetallesPersonajes.class);
-       startActivity(intent);
+       Intent intent = new Intent(context, DetallesPersonajes.class);
+       Bundle extras = new Bundle();
+       extras.putString("nombre",personaje.getPersonaje());
+       extras.putInt("imagen",personaje.getImagen());
+       extras.putString("descripcion",personaje.getDescripcion());
+       extras.putString("habilidades",personaje.getHabilidades());
+       context.startActivity(intent);
     }
 }
