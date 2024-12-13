@@ -1,5 +1,7 @@
 package dam.pmdm.tarea2;
 
+import static java.security.AccessController.getContext;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,26 +13,28 @@ import dam.pmdm.tarea2.databinding.PersonajeCardviewBinding;
 
 public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <PersonajeViewHolder> {
 
-    private final ArrayList<DataPersonajeItem> personajes;
+    private final ArrayList<PersonajeData> personajes;
     private Context context;
-    private View v;
 
-    public PersonajeRecyclerViewAdapter (ArrayList<DataPersonajeItem> personaje) {
+
+    public PersonajeRecyclerViewAdapter (ArrayList<PersonajeData> personaje) {
         this.personajes = personaje;
     }
 
     @NonNull
     @Override
-    public PersonajeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        PersonajeCardviewBinding binding = PersonajeCardviewBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+    public PersonajeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        PersonajeCardviewBinding binding = PersonajeCardviewBinding.inflate(
+                LayoutInflater.from(parent.getContext()), parent, false
+        );
         return new PersonajeViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(PersonajeViewHolder holder, int position){
-        DataPersonajeItem currentPersonaje = this.personajes.get(position);
+    public void onBindViewHolder(@NonNull PersonajeViewHolder holder, int position){
+        PersonajeData currentPersonaje = this.personajes.get(position);
         holder.bind(currentPersonaje);
-        holder.itemView.setOnClickListener(view -> itemClicked(currentPersonaje));
+        holder.itemView.setOnClickListener(view -> itemClicked(currentPersonaje,view));
     }
 
     @Override
@@ -38,9 +42,8 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
         return personajes.size();
     }
 
-    private void itemClicked(PersonajeData currentPersonaje) {
-        context = Context.;
-        ((MainActivity)context).personajeClicked(currentPersonaje);
+    private void itemClicked(PersonajeData currentPersonaje, View view) {
+        ((MainActivity) view.getContext()).personajeClicked(currentPersonaje,view);
     }
 
 }

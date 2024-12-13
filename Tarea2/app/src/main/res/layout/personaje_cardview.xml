@@ -5,7 +5,7 @@
     <data>
         <variable
             name="datapersonaje"
-            type="dam.pmdm.tarea2.DataPersonajeItem" />
+            type="dam.pmdm.tarea2.PersonajeData" />
     </data>
 
 <androidx.cardview.widget.CardView

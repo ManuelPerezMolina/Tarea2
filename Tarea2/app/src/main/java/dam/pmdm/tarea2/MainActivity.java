@@ -1,5 +1,6 @@
 package dam.pmdm.tarea2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     List<PersonajeData> items;
     private Context context;
+    private MainActivity mainactivity;
 
 
     @Override
@@ -71,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
                         "Residente del Reino Champiñón, trabaja al servicio de la Princesa Peach",
                         "es muy alegre y leal"));
 
-        binding.amRvpersonajes.setAdapter(new PersonajeRecyclerViewAdapter((ArrayList<DataPersonajeItem>) items));
+        binding.amRvpersonajes.setAdapter(new PersonajeRecyclerViewAdapter((ArrayList<PersonajeData>) items));
 
     }
 
-    public void personajeClicked(PersonajeData currentPersonaje){
-        Intent intent = new Intent(this, DetallesPersonajes.class);
-        startActivity(intent);
+    public void personajeClicked(PersonajeData personaje,View view){
+       System.out.println("Has pulsado el botón"+personaje);
+       Intent intent = new Intent(this,DetallesPersonajes.class);
+       startActivity(intent);
     }
 }

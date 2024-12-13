@@ -8,12 +8,12 @@ public class PersonajeViewHolder extends RecyclerView.ViewHolder {
 
     private final PersonajeCardviewBinding binding;
 
-    public PersonajeViewHolder(@NonNull PersonajeCardviewBinding binding) {
+    public PersonajeViewHolder(PersonajeCardviewBinding binding) {
         super(binding.getRoot());
         this.binding = binding;
     }
 
-    public void bind (@NonNull DataPersonajeItem datapersonaje) {
+    public void bind (PersonajeData datapersonaje) {
         binding.pctextview.setText(datapersonaje.getPersonaje());
         binding.pcimagenview.setImageResource(datapersonaje.getImagen());
         binding.executePendingBindings();
