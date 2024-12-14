@@ -1,7 +1,10 @@
 package dam.pmdm.tarea2;
 
-import android.graphics.drawable.Drawable;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import dam.pmdm.tarea2.databinding.ActivityMainBinding;
@@ -19,7 +21,10 @@ import dam.pmdm.tarea2.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private ArrayList<PersonajeData> items = new ArrayList<>();
+    List<PersonajeData> items;
+    private Context context;
+    private MainActivity mainactivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,38 +36,56 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        init();
+    }
 
+
+    public void init() {
+        this.context = context;
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.amRvpersonajes.setLayoutManager(new LinearLayoutManager(this));
 
+        items = new ArrayList<>();
         items.add(
                 0,
                 new PersonajeData(
                         R.drawable.mario,
                         "MARIO",
-                        "ESTE ES MARIO"));
+                        "El héroe principal del Reino Champiñón.",
+                        "poderosa habilidad para saltar"));
         items.add(1,
                 new PersonajeData(
                         R.drawable.luigi,
                         "LUIGI",
-                        "ESTE ES LUIGI"));
+                        "Hermano de Mario y héroe del Reino Champiñón",
+                        "puede saltar más alto que Mario"));
         items.add(2,
                 new PersonajeData(
                         R.drawable.peache,
                         "PEACHE",
-                        "ESTE ES PEACHE"));
+                        "La querida princesa del Reino Champiñón",
+                        "Es extremadamente amable y siempre está trabajando para crear un mundo en el que todos puedan convivir juntos y felices"));
         items.add(3,
                 new PersonajeData(
                         R.drawable.toach,
                         "TOACH",
-                        "ESTE ES TOACH"));
+                        "Residente del Reino Champiñón, trabaja al servicio de la Princesa Peach",
+                        "es muy alegre y leal"));
 
-        binding.amRvpersonajes.setAdapter(new PersonajeRecyclerViewAdapter(items));
+        binding.amRvpersonajes.setAdapter(new PersonajeRecyclerViewAdapter((ArrayList<PersonajeData>) items));
 
     }
 
-    public void personajeClicked(PersonajeData currentPersonaje) {
-
+    public void personajeClicked(PersonajeData personaje,View view){
+       System.out.println("Has pulsado el botón"+personaje);
+       Context context = view.getContext();
+       Intent intent = new Intent(context, DetallesPersonajes.class);
+       /**Bundle extras = new Bundle();
+       extras.putString("nombre",personaje.getPersonaje());
+       extras.putInt("imagen",personaje.getImagen());
+       extras.putString("descripcion",personaje.getDescripcion());
+       extras.putString("habilidades",personaje.getHabilidades());**/
+       context.startActivity(intent);
     }
 }

@@ -5,19 +5,25 @@ public class PersonajeData {
     private final int imagen;
     private final String personaje;
     private final String descripcion;
+    private final String habilidades;
 
 
-    public PersonajeData(int imagen, String personaje, String descripcion) {
+    public PersonajeData(int imagen, String personaje, String descripcion, String habilidades) {
         this.imagen = imagen;
         this.personaje = personaje;
         this.descripcion = descripcion;
+        this.habilidades = habilidades;
     }
 
-    public int getImagen(int i) {
+    public String getHabilidades() {
+        return habilidades;
+    }
+
+    public int getImagen() {
         return imagen;
     }
 
-    public String getPersonaje(int i) {
+    public String getPersonaje() {
         return personaje;
     }
 
