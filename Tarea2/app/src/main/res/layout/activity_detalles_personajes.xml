@@ -33,26 +33,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/nombre_personaje"
-            android:textSize="40sp"
-            android:padding="10dp"
-            android:textAlignment="center" />
+            style="@style/LetraGrande" />
 
         <TextView
             android:id="@+id/adpdescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/descripcion"
-            android:textSize="30sp"
-            android:padding="10dp"
-            android:textAlignment="center" />
+            style="@style/LetraMediana" />
 
         <TextView
             android:id="@+id/adphabilidades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/habilidades"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:textAlignment="center" />
+            style="@style/LetraPequeña" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

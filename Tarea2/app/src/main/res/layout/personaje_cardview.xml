@@ -25,10 +25,8 @@
 
         <ImageView
             android:id="@+id/pcimagenview"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:srcCompat="@drawable/mario"
-            android:scaleType="centerCrop"/>
+            style="@style/Imagenpequeña"
+            app:srcCompat="@drawable/mario"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre_personaje"
-                android:textSize="20sp" />
+                style="@style/LetraMediana" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
