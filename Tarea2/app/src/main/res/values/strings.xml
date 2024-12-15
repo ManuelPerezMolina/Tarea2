@@ -2,8 +2,9 @@
     <string name="app_name">Tarea 2</string>
     <string name="titulo">ELIGE UN PERSONAJE</string>
     <string name="nombre_personaje">TextView</string>
-    <string name="Titulo_Aplicacion"><u>PERSONAJES DE MARIO BROS</u></string>
+    <string name="Titulo_Aplicacion"><u>ELIGE UN PERSONAJE</u></string>
     <string name="descripcion">DESCRIPCION</string>
     <string name="habilidades">HABILIDADES</string>
     <string name="segundapantalla">segundapantalla</string>
+    <string name="menu">Acerca de...</string>
 </resources>
