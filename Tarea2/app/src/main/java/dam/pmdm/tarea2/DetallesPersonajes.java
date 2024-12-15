@@ -29,12 +29,9 @@ public class DetallesPersonajes extends AppCompatActivity {
 
     public void init(){
        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            binding.adpnombrepersonaje.setText(extras.getString("nombre"));
-            binding.adpdescripcion.setText(extras.getString("descripcion"));
-            binding.adphabilidades.setText(extras.getString("habilidades"));
-            Intent intent = getIntent();
-            int imagen = intent.getIntExtra("imagen", 0);
-        }
+       binding.adpnombrepersonaje.setText(extras.getString("nombre"));
+       binding.adpdescripcion.setText(extras.getString("descripcion"));
+       binding.adphabilidades.setText(extras.getString("habilidades"));
+       binding.adpimageView.setImageResource(extras.getInt("imagen"));
     }
 }

@@ -22,9 +22,11 @@
 
         <ImageView
             android:id="@+id/adpimageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/mario"/>
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/peache"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/adpnombrepersonaje"
@@ -49,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/habilidades"
-            android:textSize="11sp"
+            android:textSize="20sp"
             android:padding="10dp"
             android:textAlignment="center" />
     </LinearLayout>
