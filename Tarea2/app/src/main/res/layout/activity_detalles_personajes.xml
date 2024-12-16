@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Imagen del Personaje -->
         <ImageView
             android:id="@+id/adpimageView"
             android:layout_width="200dp"
@@ -30,6 +31,7 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/peache" />
 
+        <!-- Nombre del Personaje       -->
         <TextView
             android:id="@+id/adpnombrepersonaje"
             style="@style/LetraGrande"
@@ -37,6 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/nombre_personaje" />
 
+<!--        Nos muestra una pequeña descripción del personaje-->
         <TextView
             android:id="@+id/adpdescripcion"
             style="@style/LetraMediana"
@@ -44,6 +47,7 @@
             android:layout_height="wrap_content"
             android:text="@string/descripcion" />
 
+<!--        Nos indica las habilidades del personaje-->
         <TextView
             android:id="@+id/adphabilidades"
             style="@style/LetraPequeña"

@@ -1,5 +1,10 @@
 package dam.pmdm.tarea2;
 
+/**
+ * Clase principal con la información de los personajes
+ *
+ */
+
 public class PersonajeData {
 
     private final int imagen;

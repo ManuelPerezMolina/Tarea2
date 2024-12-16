@@ -30,13 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
     private MainActivity mainactivity;
 
-    /**
-     *
-     * @param savedInstanceState If the activity is being re-initialized after
-     *     previously being shut down then this Bundle contains the data it most
-     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
-     *
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *
-     * @param menu The options menu in which you place your items.
+     * @param menu inflamos el menu que hemos generado en res/menu/personaje_menu.xml
      *
-     * @return
+     * @return true
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -64,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *
-     * @param item The menu item that was selected.
+     * @param item corresponde a la opción del menu Acerca de... que nos dirige al metodo
+     *             mostrarDialogo()
      *
-     * @return
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -79,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     *
+     * Creamos un Dialogo que nos da la información del nombre del desarrollador y
+     * de la versión de la App
+     *
+     */
     private void mostrarDialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         TextView myMsg = new TextView(this);
@@ -93,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.amRvpersonajes.setLayoutManager(new LinearLayoutManager(this));
-
+        /**
+         * Creamos un ArrayList con los datos de cada cardview
+         *      (imagen,nombre personaje,descripción y habilidades)
+         */
         items = new ArrayList<>();
         items.add(
                 0,
@@ -125,6 +127,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Metodo para gestionar click en un cardview procedente del
+     * metodo PersonajeRecyclerViewAdapter.java/itemClicked
+     * @param personaje nos da la información del cardview clickado
+     * @param view viene heredado del modulo PersonajeRecyclerViewAdapter.java/itemClicked
+     */
     public void personajeClicked(PersonajeData personaje,View view){
 
        Context context = view.getContext();

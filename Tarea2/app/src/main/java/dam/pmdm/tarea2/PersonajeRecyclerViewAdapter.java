@@ -12,12 +12,21 @@ import dam.pmdm.tarea2.databinding.PersonajeCardviewBinding;
 public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <PersonajeViewHolder> {
 
     private final ArrayList<PersonajeData> personajes;
-    private Context context;
 
-
+    /**
+     * Constructor de la clase
+     * @param personaje parametro recogido de MainActivity con los datos de los personajes
+     */
     public PersonajeRecyclerViewAdapter (ArrayList<PersonajeData> personaje) {
         this.personajes = personaje;
     }
+
+    /**
+     * Metodo para inflar los datos de los personajes en las cardView
+     * @param parent
+     * @param viewType
+     * @return PersonajeViewHolder.java y los datos de los personajes
+     */
 
     @NonNull
     @Override
@@ -28,6 +37,11 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
         return new PersonajeViewHolder(binding);
     }
 
+    /**
+     *Colocamos los datos de los personajes en el recyclerview y llamamos al método itemClicked
+     * @param holder cardview clickado
+     * @param position posició de los datos del cardview pulsado
+     */
     @Override
     public void onBindViewHolder(@NonNull PersonajeViewHolder holder, int position){
         PersonajeData currentPersonaje = this.personajes.get(position);
@@ -35,13 +49,22 @@ public class PersonajeRecyclerViewAdapter extends RecyclerView.Adapter <Personaj
         holder.itemView.setOnClickListener(view -> itemClicked(currentPersonaje,view));
     }
 
+    /**
+     * Cuenta el numero de Cardview creados
+     * @return devuelve el número de elementos de la lista
+     */
     @Override
     public int getItemCount(){
         return personajes.size();
     }
 
+    /**
+     * Metodo que recoge el clikado de un cardview y envia los datos a
+     * MainActivity.java/personajeClicked
+     * @param currentPersonaje datos del personaje del cardview clickado
+     * @param view
+     */
     private void itemClicked(PersonajeData currentPersonaje, View view) {
-        context = view.getContext();
         ((MainActivity) view.getContext()).personajeClicked(currentPersonaje,view);
     }
 

@@ -8,6 +8,8 @@
             type="dam.pmdm.tarea2.PersonajeData" />
     </data>
 
+<!--Diseño de las cardview -->
+
 <androidx.cardview.widget.CardView
     android:id="@+id/pccardview"
     android:layout_width="match_parent"

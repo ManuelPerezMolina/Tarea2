@@ -12,6 +12,8 @@ public class DetallesPersonajes extends AppCompatActivity {
 
     private Context context;
     private ActivityDetallesPersonajesBinding binding;
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,11 @@ public class DetallesPersonajes extends AppCompatActivity {
         init();
     }
 
+    /**
+     *
+     * Recogemos el Bundle creado para la cesión de datos de MainActivity
+     *
+     */
     public void init(){
        Bundle extras = getIntent().getExtras();
        binding.adpnombrepersonaje.setText(extras.getString("nombre"));
