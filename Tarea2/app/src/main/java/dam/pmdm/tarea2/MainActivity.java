@@ -1,12 +1,19 @@
 package dam.pmdm.tarea2;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -39,6 +46,31 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.personaje_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.acerca_de) {
+            mostrarDialogo();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void mostrarDialogo() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        TextView myMsg = new TextView(this);
+        myMsg.setText(R.string.mensaje);
+        myMsg.setTextSize(40);
+        myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
+        builder.setView(myMsg).show();
+    }
 
     public void init() {
         this.context = context;
