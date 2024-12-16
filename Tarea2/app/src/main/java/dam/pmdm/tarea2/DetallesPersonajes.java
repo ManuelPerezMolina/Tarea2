@@ -2,15 +2,11 @@ package dam.pmdm.tarea2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 import dam.pmdm.tarea2.databinding.ActivityDetallesPersonajesBinding;
-import dam.pmdm.tarea2.databinding.ActivityMainBinding;
 
 public class DetallesPersonajes extends AppCompatActivity {
 

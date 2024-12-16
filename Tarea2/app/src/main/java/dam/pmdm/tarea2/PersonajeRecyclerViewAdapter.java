@@ -1,7 +1,5 @@
 package dam.pmdm.tarea2;
 
-import static java.security.AccessController.getContext;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

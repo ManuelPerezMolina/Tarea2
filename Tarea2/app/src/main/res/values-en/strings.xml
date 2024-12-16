@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SUPER MARIO BROS</string>
+    <string name="eleccion"><u>CHOOSE A CHARACTER</u></string>
+    <string name="descripcion">DESCRIPTION</string>
+    <string name="habilidades">SKILLS</string>
+    <string name="segundapantalla">CHARACTER DATA</string>
+    <string name="menu">About...</string>
+    <string name="mensaje">Application developed by <b>Manuel Pérez</b> Version 1.0</string>
+</resources>

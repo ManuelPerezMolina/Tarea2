@@ -26,6 +26,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/eleccion"
+                android:gravity="center"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/amRvpersonajes"

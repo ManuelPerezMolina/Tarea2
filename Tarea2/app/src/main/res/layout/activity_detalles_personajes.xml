@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:layout_gravity="center"
     android:id="@+id/adp">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
@@ -24,30 +25,31 @@
             android:id="@+id/adpimageView"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/peache"
             android:layout_gravity="center"
-            android:scaleType="fitXY"/>
+            android:layout_marginTop="120dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/peache" />
 
         <TextView
             android:id="@+id/adpnombrepersonaje"
+            style="@style/LetraGrande"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nombre_personaje"
-            style="@style/LetraGrande" />
+            android:text="@string/nombre_personaje" />
 
         <TextView
             android:id="@+id/adpdescripcion"
+            style="@style/LetraMediana"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/descripcion"
-            style="@style/LetraMediana" />
+            android:text="@string/descripcion" />
 
         <TextView
             android:id="@+id/adphabilidades"
+            style="@style/LetraPequeña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/habilidades"
-            style="@style/LetraPequeña" />
+            android:text="@string/habilidades" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">SUPER MARIO BROS</string>
-    <string name="titulo">ELIGE UN PERSONAJE</string>
-    <string name="nombre_personaje">TextView</string>
-    <string name="Titulo_Aplicacion"><u>ELIGE UN PERSONAJE</u></string>
+    <string name="nombre_personaje" translatable="false">TextView</string>
+    <string name="eleccion"><u>ELIGE UN PERSONAJE</u></string>
     <string name="descripcion">DESCRIPCION</string>
     <string name="habilidades">HABILIDADES</string>
-    <string name="segundapantalla">segundapantalla</string>
-    <string name="menu">Acerca de...</string>
+    <string name="segundapantalla">DATOS PERSONAJE</string>
+    <string name="menu">Acerca de…</string>
     <string name="mensaje">Aplicación desarrollada por\n<b>Manuel Pérez</b>\nVersión 1.0</string>
 </resources>

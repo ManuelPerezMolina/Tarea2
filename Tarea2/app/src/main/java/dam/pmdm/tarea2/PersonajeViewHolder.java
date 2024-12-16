@@ -1,6 +1,5 @@
 package dam.pmdm.tarea2;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import dam.pmdm.tarea2.databinding.PersonajeCardviewBinding;
 
