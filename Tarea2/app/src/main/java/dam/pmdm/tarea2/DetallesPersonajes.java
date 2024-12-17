@@ -3,6 +3,8 @@ package dam.pmdm.tarea2;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,5 +38,7 @@ public class DetallesPersonajes extends AppCompatActivity {
        binding.adpdescripcion.setText(extras.getString("descripcion"));
        binding.adphabilidades.setText(extras.getString("habilidades"));
        binding.adpimageView.setImageResource(extras.getInt("imagen"));
+       Toast toast = Toast.makeText(this,getString(R.string.men_toast)+extras.getString("nombre"),Toast.LENGTH_SHORT);
+       toast.show();
     }
 }

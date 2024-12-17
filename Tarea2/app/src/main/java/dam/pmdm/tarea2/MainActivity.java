@@ -13,10 +13,13 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,38 +95,48 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.amRvpersonajes.setLayoutManager(new LinearLayoutManager(this));
+
         /**
          * Creamos un ArrayList con los datos de cada cardview
          *      (imagen,nombre personaje,descripción y habilidades)
          */
+
         items = new ArrayList<>();
         items.add(
                 0,
                 new PersonajeData(
                         R.drawable.mario,
-                        "MARIO",
-                        "El héroe principal del Reino Champiñón.",
-                        "poderosa habilidad para saltar"));
+                        getString(R.string.n_mario),
+                        getString(R.string.des_mario),
+                        getString(R.string.hab_mario)));
         items.add(1,
                 new PersonajeData(
                         R.drawable.luigi,
-                        "LUIGI",
-                        "Hermano de Mario y héroe del Reino Champiñón",
-                        "puede saltar más alto que Mario"));
+                        getString(R.string.n_luigi),
+                        getString(R.string.des_luigi),
+                        getString(R.string.hab_luigi)));
         items.add(2,
                 new PersonajeData(
                         R.drawable.peache,
-                        "PEACHE",
-                        "La querida princesa del Reino Champiñón",
-                        "Es extremadamente amable y siempre está trabajando para crear un mundo en el que todos puedan convivir juntos y felices"));
+                        getString(R.string.n_peache),
+                        getString(R.string.des_peache),
+                        getString(R.string.hab_peache)));
         items.add(3,
                 new PersonajeData(
                         R.drawable.toach,
-                        "TOACH",
-                        "Residente del Reino Champiñón, trabaja al servicio de la Princesa Peach",
-                        "es muy alegre y leal"));
+                        getString(R.string.n_toad),
+                        getString(R.string.des_toad),
+                        getString(R.string.hab_toad)));
 
+        simpleSnackbar(findViewById(android.R.id.content));
         binding.amRvpersonajes.setAdapter(new PersonajeRecyclerViewAdapter((ArrayList<PersonajeData>) items));
+
+    }
+
+    public void simpleSnackbar(View view){
+        Snackbar mySnackbar = Snackbar.make(view, R.string.men_snackbar, Snackbar.LENGTH_SHORT);
+        mySnackbar.show();
+
 
     }
 

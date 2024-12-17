@@ -7,4 +7,20 @@
     <string name="segundapantalla">DATOS PERSONAJE</string>
     <string name="menu">Acerca de…</string>
     <string name="mensaje">Aplicación desarrollada por\n<b>Manuel Pérez</b>\nVersión 1.0</string>
+    <string name="n_mario" translatable="false">MARIO</string>
+    <string name="des_mario">El héroe principal del Reino Champiñón.</string>
+    <string name="hab_mario">poderosa habilidad para saltar</string>
+    <string name="n_luigi" translatable="false">LUIGI</string>
+    <string name="des_luigi">Hermano de Mario y héroe del Reino Champiñón.</string>
+    <string name="hab_luigi">puede saltar más alto que Mario</string>
+    <string name="n_peache" translatable="false">PEACHE</string>
+    <string name="des_peache">la querida princesa del Reino Champiñón.</string>
+    <string name="hab_peache">Es extremadamente amable y siempre está trabajando para crear un mundo en el que todos puedan convivir juntos y felices</string>
+    <string name="n_toad" translatable="false">TOAD</string>
+    <string name="des_toad">Residente del Reino Champiñón, trabaja al servicio de la Princesa Peach</string>
+    <string name="hab_toad">Es muy alegre y leal</string>
+    <string name="men_snackbar">Bienvenidos al mundo de Mario</string>
+    <string name="men_toast">"Se ha seleccionado el personaje "</string>
+
+
 </resources>

@@ -7,4 +7,12 @@
     <string name="segundapantalla">CHARACTER DATA</string>
     <string name="menu">About...</string>
     <string name="mensaje">Application developed by <b>Manuel Pérez</b> Version 1.0</string>
+    <string name="des_mario">The main hero of the Mushroom Kingdom.</string>
+    <string name="hab_mario">powerful jumping ability</string>
+    <string name="des_luigi">Mario\'s brother and hero of the Mushroom Kingdom.</string>
+    <string name="hab_luigi">can jump higher than Mario</string>
+    <string name="des_peache">the beloved princess of the Mushroom Kingdom.</string>
+    <string name="hab_peache">He is extremely kind and is always working to create a world in which everyone can live together happily.</string>
+    <string name="des_toad">Resident of the Mushroom Kingdom, he works in the service of Princess Peach</string>
+    <string name="hab_toad">He is very happy and loyal</string>
 </resources>
