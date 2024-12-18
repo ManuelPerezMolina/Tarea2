@@ -21,4 +21,5 @@
         <item name="android:layout_height">60dp</item>
         <item name="android:scaleType">centerCrop</item>
     </style>
+
 </resources>

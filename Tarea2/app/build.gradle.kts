@@ -10,7 +10,8 @@ android {
         applicationId = "dam.pmdm.tarea2"
         minSdk = 24
         //noinspection EditedTargetSdkVersion
-        targetSdk = 34
+        targetSdk = 35
+        //noinspection EditedTargetSdkVersion
         versionCode = 1
         versionName = "1.0"
 
@@ -40,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation (libs.core.splashscreen)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
